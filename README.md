@@ -1,1 +1,1 @@
-# Repo fot Python
+# Repo for Python
