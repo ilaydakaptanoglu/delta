@@ -26,3 +26,30 @@ def thebiggest(a, b, c):
     nums.append(c)
     m = max(nums)
     return m 
+
+def is_prime(n):
+    prime = True
+    if n < 2:
+        prime = False
+        return prime
+    for i in range(2, n):
+        if n % i == 0:
+            prime = False
+            break
+    return prime
+
+def poli(num):
+     s = ''
+     num_l = list(str(num))
+     d = len(num_l)
+
+     for i in range(d//2):
+         tmp = num_l[i]
+         #print(tmp)
+         num_l[i] = num_l[d-1-i]
+         num_l[d-1-i] = tmp
+     for i in range(d):
+         s += num_l[i]
+
+     num2 = int(s)
+     return (num == num2)
